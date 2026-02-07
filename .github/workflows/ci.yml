@@ -1,0 +1,27 @@
+name: Simple Python CI/CD
+
+on:
+  push:
+    branches:
+      - main   # triggers pipeline on main branch changes
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run app
+      run: python app.py
+
+    - name: Run tests
+      run: |
+        pip install pytest
+        pytest
+
+    - name: Deploy to folder
+      run: |
+        mkdir -p deploy
+        cp *.py deploy/
