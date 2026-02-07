@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/chanchalsiet/ci-cd-basic.git'
+                 git branch: 'main', url: 'https://github.com/chanchalsiet/ci-cd-basic.git'
             }
         }
 
