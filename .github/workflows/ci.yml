@@ -14,3 +14,8 @@ jobs:
 
     - name: Run Python file
       run: python app.py
+      git log
+    - name: Run tests
+      run: |
+        pip install pytest
+        pytest
