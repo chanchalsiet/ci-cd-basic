@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PATH = "/usr/local/bin:$PATH"
+    }
 
     stages {
         stage('Checkout') {
@@ -10,13 +13,14 @@ pipeline {
 
         stage('Run App') {
             steps {
-                sh 'python calculator.py'
+                sh 'python3 calculator.py'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'pip install pytest && pytest'
+                sh 'python3 -m pip install pytest'
+                sh 'python3 -m pytest'
             }
         }
 
