@@ -1,4 +1,4 @@
-from app import app
+from app import greet
 
-def test_add(x, y):
-    assert add(2, 3) == 5
+def test_greet():
+    assert greet("CI/CD") == "Hello, CI/CD!"
