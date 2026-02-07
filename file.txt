@@ -1,2 +1,5 @@
 echo "Line 1"
 echo "Feature A changes"
+
+echo "branch B"
+
