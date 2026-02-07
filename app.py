@@ -24,5 +24,6 @@ if __name__ == '__main__':
     print_hi('PyCharm')
     print(add(10, 15));
     checking_feature_branch();
+    print("delete ci yaml file");
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
