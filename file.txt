@@ -1,1 +1,2 @@
-echo "Line 1" 
+echo "Line 1"
+echo "Feature A changes"
